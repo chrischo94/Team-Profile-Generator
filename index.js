@@ -15,7 +15,7 @@ inquirer
         },
         {
             type:"input",
-            name: "name",
+            name: "id",
             message: "What is the Manager's id?"
         },
         {
@@ -145,7 +145,7 @@ function createCards(teamProf) {
     let card = `
         
         <div class="text-center card"> 
-            <div class="card-header">${teamProf.role}
+            <div class="card-header">${teamProf.getRole()}
         </div>
        
         <div class="card-body">
