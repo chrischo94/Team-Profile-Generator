@@ -19,6 +19,7 @@
 
   ## Demo
   <img src="assets/images/ezgif.com-gif-maker(2).gif">
+  Video of full demo here -- https://drive.google.com/file/d/1PzRbg6LqjJuyZVgxoMIXV1-jbPhh95bw/view?usp=sharing
 
   ## Questions
   For additional questions feel free to contact: chrischo2012@gmail.com
