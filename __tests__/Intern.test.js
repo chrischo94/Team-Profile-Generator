@@ -3,7 +3,7 @@ describe("Intern", ()=>{
   it("Can set school via constructor", () => {
     const testValue = "UCLA";
     const e = new Intern("Foo", 1, "test@test.com", testValue);
-    expect(e.school).toBe(testValue);
+    expect(e.extra).toBe(testValue);
   });
 
   it("getRole() should return \"Intern\"", () => {
