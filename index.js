@@ -30,8 +30,8 @@ inquirer
         }
     ])
         .then((res)=> {
-            let Manager = new Manager(res.name, res.id, res.email, res.extra)
-            myTeam.push(Manager)
+            let manager = new Manager(res.name, res.id, res.email, res.extra)
+            myTeam.push(manager)
             newWorker()
         })
 function writeToFile(file, data) {
@@ -43,9 +43,9 @@ function newWorker() {
     inquirer.prompt([
         {
             type: "list",
-            name: "role",
+            name: "repeat",
             message: "Add another worker?",
-            choices: ["Engineer, Intern, No Thanks"]
+            choices: ["Engineer", "Intern", "No Thanks"]
         }
     ])
         .then((res) => {
@@ -55,7 +55,7 @@ function newWorker() {
                     finishedCard += createCards(profile)
                 })
                 writeToFile("index.html", generateHTML(finishedCard))
-            } else if (answer.repeat.toString() == "Engineer") {
+            } else if (res.repeat.toString() == "Engineer") {
                 inquirer.prompt([
                     {
                         type: "input",
@@ -79,8 +79,8 @@ function newWorker() {
                     },
                 ])
                     .then((res) => {
-                        let Engineer = new Engineer(res.name, res.id, res.email, res.extra)
-                        myTeam.push(Engineer)
+                        let engineer = new Engineer(res.name, res.id, res.email, res.extra)
+                        myTeam.push(engineer)
                         newWorker()
                     })
             } else {
@@ -107,8 +107,8 @@ function newWorker() {
                     }
                 ])
                     .then((res) => {
-                        let Intern = new Intern(res.name, res.id, res.email, res.extra)
-                        myTeam.push(Intern)
+                        let intern = new Intern(res.name, res.id, res.email, res.extra)
+                        myTeam.push(intern)
                         newWorker()
                     })
             }
@@ -144,7 +144,7 @@ function generateHTML (finishedCard) {
 function createCards(teamProf) {
     let card = `
         
-        <div class="text-center card> 
+        <div class="text-center card"> 
             <div class="card-header">${teamProf.role}
         </div>
        
