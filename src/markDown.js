@@ -9,7 +9,7 @@ function generateHTML (data) {
             <title>Team Profile</title>
         </head>
         <body>
-            <header>My Team</header>
+            <header class="text-center bg-warning">My Team</header>
             <div class= "container">
             <div class="row">
                 ${generateCards(data)}
@@ -26,17 +26,18 @@ function generateHTML (data) {
 function createCards(teamProf) {
     let card = `
         
-        <div class="text-center card"> 
+        <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
             <div class="card-header">${teamProf.getRole()}
         </div>
        
-        <div class="card-body">
+        <div class="card-body text-center">
             <h5 class="card-title">${teamProf.name}</h5>
         <ul class="list-group list-group-flush">
             <li class="list-group-item">${teamProf.id}</li>
             <li class="list-group-item">${teamProf.email}</li>
             <li class="list-group-item">${teamProf.extra}</li>
         </ul>
+        </div>
         </div>`
         return card
 }
